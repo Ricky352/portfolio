@@ -10,9 +10,9 @@ export const GlobalStyle = createGlobalStyle`
         background-color: black;
         font-family: 'Rajdhani', sans-serif;
     }
+`;
 
-    /* * {
+/* * {
         box-sizing: border-box;
         outline: 1px solid white !important;
     } */
-`;
