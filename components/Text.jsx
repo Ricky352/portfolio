@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledText = styled.p`
     color: ${props => props.color || 'white'};
     font-size: ${props => props.size || '16px'};
+    font-family: 'Rajdhani', sans-serif;
     font-weight: ${props => props.weight || ''};
     text-align: justify;
     margin: ${props => props.margin || '0px 0px'};
