@@ -8,7 +8,7 @@ export function Project(props) {
             <div className="hidden-text">{props.description}</div>
           </div>
         </div>
-        <a target="_blank" href={props.link}>
+        <a target="_blank" rel="noreferrer" href={props.link}>
           <p>{props.text}</p>
         </a>
       </div>
@@ -74,14 +74,12 @@ export function Project(props) {
           display: flex;
           height: 250px;
           margin: 5px;
-          position: relative;
           width: 240px;
         }
         .imageContainer:hover .overlay {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
         .image {
-          background-size: cover;
           border-radius: 20px;
           height: 100%;
           width: 100%;
