@@ -18,7 +18,7 @@ export default function Projects() {
             tabletSize="24px"
             text="Click on the logos to see a short description"
             size="16px"
-            visibilityDesktop="none"
+            displayLaptop="none"
           />
           <Project
             image="fannen.png"
