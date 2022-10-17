@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+import { device } from "./Device";
+
 const Copyright = styled.p`
   color: white;
   margin-top: 12px;
   font-family: "Rajdhani", sans-serif;
   font-size: 12px;
+
+  @media ${device.tablet} {
+    font-size: 20px;
+  }
 `;
 
 const FooterContainer = styled.div`
@@ -17,13 +23,37 @@ const FooterContainer = styled.div`
   padding-bottom: 20px;
   width: 100%;
   margin-top: auto;
+
+  .responsive {
+    height: 40px;
+    width: 40px;
+  }
+
+  @media ${device.tablet} {
+    .responsive {
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  .responsive2 {
+    height: 36px;
+    width: 36px;
+  }
+
+  @media ${device.tablet} {
+    .responsive2 {
+      height: 40px;
+      width: 40px;
+    }
+  }
 `;
 
 const Line = styled.div`
   background-color: white;
   height: 1px;
   margin-top: 4px;
-  width: 90vw;
+  width: 100%;
 `;
 
 const Link = styled.a`
@@ -38,6 +68,10 @@ const SocialContainer = styled.div`
   display: flex;
   gap: 16px;
   justify-content: center;
+
+  @media ${device.tablet} {
+    gap: 24px;
+  }
 `;
 
 export function Footer() {
@@ -45,34 +79,43 @@ export function Footer() {
     <>
       <FooterContainer>
         <SocialContainer>
-          <Link
-            href="https://www.linkedin.com/in/ricardo-lopes4997/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/linkedin.png"
-              alt="LinkedIn"
-              width={40}
-              height={40}
-            ></Image>
-          </Link>
-          <Link href="">
-            <Image
-              src="/github-logo.png"
-              alt="LinkedIn"
-              width={36}
-              height={36}
-            ></Image>
-          </Link>
-          <Link href="https://stackoverflow.com/users/20256898/ricky352">
-            <Image
-              src="/stackoverflow.png"
-              alt="Stackoverflow"
-              width={40}
-              height={40}
-            ></Image>
-          </Link>
+          <div className="responsive">
+            <Link
+              href="https://www.linkedin.com/in/ricardo-lopes4997/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src="/linkedin.png"
+                alt="LinkedIn"
+                layout="responsive"
+                width={40}
+                height={40}
+              ></Image>
+            </Link>
+          </div>
+          <div className="responsive2">
+            <Link href="">
+              <Image
+                src="/github-logo.png"
+                alt="GitHub"
+                width={36}
+                height={36}
+                layout="responsive"
+              ></Image>
+            </Link>
+          </div>
+          <div className="responsive">
+            <Link href="https://stackoverflow.com/users/20256898/ricky352">
+              <Image
+                src="/stackoverflow.png"
+                alt="Stackoverflow"
+                width={40}
+                height={40}
+                layout="responsive"
+              ></Image>
+            </Link>
+          </div>
         </SocialContainer>
         <Line />
         <Copyright>

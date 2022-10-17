@@ -1,11 +1,18 @@
 import styled from "styled-components";
+import { device } from "./Device";
 
 const Navbar = styled.div`
   align-items: center;
   color: white;
   display: flex;
-  min-height: 80px;
   justify-content: space-around;
+  min-height: 80px;
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+    min-height: 92px;
+
+  }
 `;
 
 const Name = styled.div`
@@ -13,6 +20,10 @@ const Name = styled.div`
   font-size: 20px;
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
+
+  @media ${device.tablet} {
+    font-size: 32px;
+  }
 `;
 
 const Title = styled.a`
@@ -23,6 +34,10 @@ const Title = styled.a`
   font-weight: 400;
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media ${device.tablet} {
+    font-size: 32px;
   }
 `;
 

@@ -8,7 +8,7 @@ export default function Home() {
       <Layout>
         <Container margin="100px 0px 0px 0px">
           <MainTitle title="Hey, I'm Ricardo Lopes!"></MainTitle>
-          <MainTitle title="A Front End Developer"></MainTitle>
+          <MainTitle title="A Full Stack Developer"></MainTitle>
           <MainTitle title="From Luxembourg"></MainTitle>
         </Container>
       </Layout>

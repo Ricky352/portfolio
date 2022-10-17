@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { device } from "./Device";
 
 const Animation = keyframes`
   to {
@@ -27,6 +28,16 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 100%;
+
+  @media ${device.tablet} {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media ${device.laptop} {
+    font-size: 80px;
+    line-height: 80px;
+  }
 `;
 
 export function MainTitle(props) {
